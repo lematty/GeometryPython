@@ -3,9 +3,10 @@ Geometry
 Square Class
 @author: LeMatty
 '''
+from datamodel.Shape import Shape
 
 
-class Square():
+class Square(Shape):
 
     def __init__(self, side):
         self.side = side

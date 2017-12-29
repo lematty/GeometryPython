@@ -3,9 +3,10 @@ Geometry
 Triangle Class
 @author: LeMatty
 '''
+from datamodel.Shape import Shape
 
 
-class Triangle():
+class Triangle(Shape):
 
     def __init__(self, base, height, side1, side2):
         self.base = base
