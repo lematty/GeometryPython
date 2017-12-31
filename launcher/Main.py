@@ -8,15 +8,41 @@ Main
 from datamodel.Circle import Circle
 from datamodel.Square import Square
 from datamodel.Triangle import Triangle
+from builtins import str
 
 if __name__ == '__main__':
+    # Circles
     c1 = Circle(5)
-    s1 = Square(5)
-    t1 = Triangle(2, 3, 5, 4)
+    c2 = Circle(6)
+    c3 = Circle(7)
+    circleList = ["Circle", c1, c2, c3]
 
-    print("Circle Area: " + str(c1.getArea()))
-    print("Circle Perimeter: " + str(c1.getPerimeter()))
-    print("Square Area: " + str(s1.getArea()))
-    print("Square Perimeter: " + str(s1.getPerimeter()))
-    print("Triangle Area: " + str(t1.getArea()))
-    print("Triangle Perimeter: " + str(t1.getPerimeter()))
+    # Squares
+    s1 = Square(5)
+    s2 = Square(6)
+    s3 = Square(7)
+    squareList = ["Square", s1, s2, s3]
+
+    # Triangles
+    t1 = Triangle(2, 3, 5, 4)
+    t2 = Triangle(3, 4, 6, 5)
+    t3 = Triangle(4, 5, 7, 6)
+    triangleList = ["Triangle", t1, t2, t3]
+
+    # All Shapes
+    shapesList = [circleList, squareList, triangleList]
+
+    # Output
+    for i in shapesList:
+        counter = 0
+        for j in i:
+            if type(j) is str:
+                print("\n" + j)
+                shape = j
+            else:
+                print(j)
+                print("%s %d's Area :      %.02f" %
+                      (shape, counter, j.getArea()))
+                print("%s %d's Perimeter : %.02f\n" %
+                      (shape, counter, j.getPerimeter()))
+            counter += 1

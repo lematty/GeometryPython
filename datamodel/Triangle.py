@@ -23,7 +23,7 @@ class Triangle(Shape):
         return self.base + self.side1 + self.side2
 
     def __repr__(self):
-        return "base = '{}', height = '{}', side1 = '{}', side2 = '{}'".format(self.base, self.height, self.side1, self.side2)
+        return "Trianlge[base = '{}', height = '{}', side1 = '{}', side2 = '{}']".format(self.base, self.height, self.side1, self.side2)
 
     def __str__(self):
-        return "base = '{}'\nheight = '{}'\nside1 = '{}'\nside2 = '{}'".format(self.base, self.height, self.side1, self.side2)
+        return "base = '{}', height = '{}', side1 = '{}', side2 = '{}'".format(self.base, self.height, self.side1, self.side2)

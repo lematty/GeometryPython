@@ -21,7 +21,7 @@ class Circle(Shape):
         return 2 * pi * self.r
 
     def __repr__(self):
-        return "radius = '{}'".format(self.r)
+        return "Circle[r = '{}']".format(self.r)
 
     def __str__(self):
         return "radius = '{}'".format(self.r)
